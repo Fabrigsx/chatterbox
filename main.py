@@ -2,7 +2,13 @@ from fastapi import FastAPI, Request
 from pydantic import BaseModel
 import torch
 import torchaudio
-from src.chatterbox.models import ChatterboxTTS
+import sys
+import os
+
+# 👉 Solución: agregar src al path para importar bien los módulos
+sys.path.append(os.path.join(os.path.dirname(__file__), "src"))
+
+from chatterbox.models import ChatterboxTTS
 
 app = FastAPI()
 tts = ChatterboxTTS()
