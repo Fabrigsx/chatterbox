@@ -1,0 +1,5 @@
+fastapi
+torch
+torchaudio
+pydantic
+uvicorn[standard]
